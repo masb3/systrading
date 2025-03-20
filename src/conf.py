@@ -1,8 +1,8 @@
-FUTURES_A_SOURCE = "futuresA.csv"
+FUTURES_A_SOURCE = "../futuresA.csv"
 FUTURES_A_DATE_COLUMN_NAME = "Date"
 FUTURES_A_PRICE_COLUMN_NAME = "Last"
 
-FUTURES_B_SOURCE = "futuresB.csv"
+FUTURES_B_SOURCE = "../futuresB.csv"
 FUTURES_B_DATE_COLUMN_NAME = "Date"
 FUTURES_B_PRICE_COLUMN_NAME = "Close"
 
