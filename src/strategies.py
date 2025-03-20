@@ -64,7 +64,7 @@ class TradingStrategy(ABC):
         plt.legend()
         plt.show()
 
-    def annualized_return(self):
+    def annualized_return(self) -> float:
         if self.results is None:
             raise RuntimeError("Run execute_strategy() first.")
 
