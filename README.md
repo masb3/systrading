@@ -30,17 +30,29 @@ Before you begin, ensure you have the following installed:
 
 ## Execution
 
-1. **Locate data files:**  
+1. **Install project:**  
+   ```bash
+   git clone git@github.com:masb3/systrading.git
+   ```
+   
+2. **Locate data files:**  
 
-   Put `futuresA.csv` and `futuresB.csv` into the project root (where `pyptoject.toml`).  
+   Put `futuresA.csv` and `futuresB.csv` into the [`/src/`  folder](https://github.com/masb3/systrading/tree/main/src).  
    Alternatively update `FUTURES_A_SOURCE` and `FUTURES_B_SOURCE` in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)
    with absolute paths.  
 
-2. **Check the possible configuration parameters in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)**  
+3. **Check the possible configuration parameters in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)**  
 
-3. **Run the program:**  
+4. **Run the program:**  
+
+   From the project root (where `pyproject.toml`):
+   ```bash
+   uv run -m src.main
+   ```
+
+5. **Run tests:**
 
    From the project root:
    ```bash
-   uv run -m src.main
+   uv run -m pytest
    ```
