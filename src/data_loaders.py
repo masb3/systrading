@@ -1,6 +1,12 @@
+import logging
+
 import pandas as pd
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -18,6 +24,7 @@ class DataLoader(ABC):
 
 class CSVLoader(DataLoader):
     def load_data(self, data_meta: DataMeta) -> pd.DataFrame:
+        logger.info("Loading datasets ...")
         df = pd.read_csv(
             data_meta.source,
             parse_dates=[data_meta.date_col_name],

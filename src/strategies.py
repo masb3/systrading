@@ -1,3 +1,4 @@
+import logging
 from dataclasses import dataclass
 
 import matplotlib.pyplot as plt
@@ -5,6 +6,10 @@ from abc import ABC, abstractmethod
 
 from src import conf
 from src.data_loaders import DataLoader, DataMeta
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -69,12 +74,13 @@ class TradingStrategy(ABC):
         annualized_return = self.results["PnL"].sum() / (
             total_days / conf.ANNUAL_TRADING_DAYS
         )
-        print(f"Annualized Return: {annualized_return:.2%}")
+        logger.info(f"Annualized Return: {annualized_return:.2%}")
         return annualized_return
 
 
 class MeanReversionStrategy(TradingStrategy):
     def execute_strategy(self):
+        logger.info("Executing strategy ...")
         df = self.futures_b.copy()
         df["Returns"] = df[self.futures_b_meta.price_col_name].pct_change()
         df["Rolling_Std"] = df["Returns"].rolling(self.N).std()
