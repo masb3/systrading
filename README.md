@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed:
    
 2. **Locate data files:**  
 
-   Put `futuresA.csv` and `futuresB.csv` into the [`/src/`  folder](https://github.com/masb3/systrading/tree/main/src).  
+   Put `futuresA.csv` and `futuresB.csv` into the project root (where `pyproject.toml`).  
    Alternatively update `FUTURES_A_SOURCE` and `FUTURES_B_SOURCE` in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)
    with absolute paths.  
 
@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed:
 
 4. **Run the program:**  
 
-   From the project root (where `pyproject.toml`):
+   From the project root:
    ```bash
    uv run -m src.main
    ```
