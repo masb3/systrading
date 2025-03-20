@@ -64,10 +64,13 @@ class TradingStrategy(ABC):
             raise RuntimeError("Run execute_strategy() first.")
 
         total_days = (self.results.index[-1] - self.results.index[0]).days
+        if total_days == 0 or conf.ANNUAL_TRADING_DAYS == 0:
+            return 0.0
         annualized_return = self.results["PnL"].sum() / (
             total_days / conf.ANNUAL_TRADING_DAYS
         )
         print(f"Annualized Return: {annualized_return:.2%}")
+        return annualized_return
 
 
 class MeanReversionStrategy(TradingStrategy):
