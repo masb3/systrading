@@ -49,6 +49,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    uv run -m src.main
    ```
+   Note: first run may take some time for `uv` to create virtual environment and install dependencies
 
 5. **Run tests:**
 
