@@ -36,7 +36,7 @@ Before you begin, ensure you have the following installed:
    Alternatively update `FUTURES_A_SOURCE` and `FUTURES_B_SOURCE` in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)
    with absolute paths.  
 
-2. **Check the possible configuration parameters on [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)**  
+2. **Check the possible configuration parameters in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)**  
 
 3. **Run the program:**  
 
