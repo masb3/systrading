@@ -32,11 +32,13 @@ Before you begin, ensure you have the following installed:
 
 1. **Locate data files:**  
 
-   Put `futuresA.csv` and `futuresB.csv` into the project root (where `pyptoject.toml`)  
+   Put `futuresA.csv` and `futuresB.csv` into the project root (where `pyptoject.toml`).  
    Alternatively update `FUTURES_A_SOURCE` and `FUTURES_B_SOURCE` in [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)
    with absolute paths.  
 
-2. **Run the program:**  
+2. **Check the possible configuration parameters on [conf.py](https://github.com/masb3/systrading/blob/main/src/conf.py)**  
+
+3. **Run the program:**  
 
    From the project root:
    ```bash
